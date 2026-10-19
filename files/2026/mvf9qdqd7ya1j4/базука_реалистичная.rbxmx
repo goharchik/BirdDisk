@@ -1,0 +1,1196 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+	<External>null</External>
+	<External>nil</External>
+	<Item class="Tool" referent="RBX_TOOL">
+		<Properties>
+			<string name="Name">Bazooka</string>
+			<string name="ToolTip">Базука M1A1</string>
+			<bool name="CanBeDropped">false</bool>
+			<bool name="Enabled">true</bool>
+			<bool name="RequiresHandle">true</bool>
+			<bool name="ManualActivationOnly">false</bool>
+			<Content name="TextureId"><url>http://www.roblox.com/asset/?id=90021376</url></Content>
+			<CoordinateFrame name="Grip">
+				<X>0</X><Y>-0.1</Y><Z>0</Z>
+				<R00>1</R00><R01>0</R01><R02>0</R02>
+				<R10>0</R10><R11>1</R11><R12>0</R12>
+				<R20>0</R20><R21>0</R21><R22>1</R22>
+			</CoordinateFrame>
+		</Properties>
+
+		<!-- ===================== ДЕТАЛИ БАЗУКИ ===================== -->
+		<Item class="Part" referent="P_HANDLE">
+			<Properties>
+				<string name="Name">Handle</string>
+				<token name="shape">1</token>
+				<bool name="Anchored">false</bool>
+				<bool name="CanCollide">false</bool>
+				<token name="Material">272</token>
+				<Color3uint8 name="Color3uint8">4280822312</Color3uint8>
+				<token name="TopSurface">0</token>
+				<token name="BottomSurface">0</token>
+				<CoordinateFrame name="CFrame"><X>0</X><Y>0</Y><Z>0</Z><R00>1</R00><R01>0</R01><R02>0</R02><R10>0</R10><R11>1</R11><R12>0</R12><R20>0</R20><R21>0</R21><R22>1</R22></CoordinateFrame>
+				<Vector3 name="size"><X>0.28</X><Y>0.85</Y><Z>0.42</Z></Vector3>
+			</Properties>
+			<Item class="Sound" referent="S_FIRE">
+				<Properties>
+					<string name="Name">FireSound</string>
+					<Content name="SoundId"><url>rbxasset://sounds/Rocket shot.wav</url></Content>
+					<float name="Volume">1.5</float>
+					<float name="RollOffMaxDistance">600</float>
+				</Properties>
+			</Item>
+			<Item class="Sound" referent="S_RELOAD">
+				<Properties>
+					<string name="Name">ReloadSound</string>
+					<Content name="SoundId"><url>rbxassetid://189446768</url></Content>
+					<float name="Volume">1</float>
+					<float name="RollOffMaxDistance">150</float>
+				</Properties>
+			</Item>
+		</Item>
+
+		<Item class="Part" referent="P_TUBE">
+			<Properties>
+				<string name="Name">Tube</string>
+				<token name="shape">2</token>
+				<bool name="Anchored">false</bool>
+				<bool name="CanCollide">false</bool>
+				<bool name="CanTouch">false</bool>
+				<bool name="Massless">true</bool>
+				<token name="Material">1088</token>
+				<Color3uint8 name="Color3uint8">4283061044</Color3uint8>
+				<token name="TopSurface">0</token>
+				<token name="BottomSurface">0</token>
+				<CoordinateFrame name="CFrame"><X>0</X><Y>0.7</Y><Z>0.5</Z><R00>0</R00><R01>0</R01><R02>1</R02><R10>0</R10><R11>1</R11><R12>0</R12><R20>-1</R20><R21>0</R21><R22>0</R22></CoordinateFrame>
+				<Vector3 name="size"><X>5.2</X><Y>0.72</Y><Z>0.72</Z></Vector3>
+			</Properties>
+			<Item class="Attachment" referent="A_MUZZLE">
+				<Properties>
+					<string name="Name">Muzzle</string>
+					<CoordinateFrame name="CFrame"><X>2.8</X><Y>0</Y><Z>0</Z><R00>1</R00><R01>0</R01><R02>0</R02><R10>0</R10><R11>1</R11><R12>0</R12><R20>0</R20><R21>0</R21><R22>1</R22></CoordinateFrame>
+				</Properties>
+			</Item>
+			<Item class="Attachment" referent="A_REAR">
+				<Properties>
+					<string name="Name">Rear</string>
+					<CoordinateFrame name="CFrame"><X>-2.95</X><Y>0</Y><Z>0</Z><R00>1</R00><R01>0</R01><R02>0</R02><R10>0</R10><R11>1</R11><R12>0</R12><R20>0</R20><R21>0</R21><R22>1</R22></CoordinateFrame>
+				</Properties>
+			</Item>
+			<Item class="WeldConstraint" referent="W_TUBE"><Properties><string name="Name">Weld</string><Ref name="Part0">P_HANDLE</Ref><Ref name="Part1">P_TUBE</Ref><bool name="Enabled">true</bool></Properties></Item>
+		</Item>
+
+		<Item class="Part" referent="P_FRONTRING">
+			<Properties>
+				<string name="Name">FrontRing</string>
+				<token name="shape">2</token>
+				<bool name="CanCollide">false</bool><bool name="CanTouch">false</bool><bool name="Massless">true</bool>
+				<token name="Material">1088</token>
+				<Color3uint8 name="Color3uint8">4280822312</Color3uint8>
+				<token name="TopSurface">0</token><token name="BottomSurface">0</token>
+				<CoordinateFrame name="CFrame"><X>0</X><Y>0.7</Y><Z>-1.95</Z><R00>0</R00><R01>0</R01><R02>1</R02><R10>0</R10><R11>1</R11><R12>0</R12><R20>-1</R20><R21>0</R21><R22>0</R22></CoordinateFrame>
+				<Vector3 name="size"><X>0.35</X><Y>0.84</Y><Z>0.84</Z></Vector3>
+			</Properties>
+			<Item class="WeldConstraint" referent="W_FRONTRING"><Properties><string name="Name">Weld</string><Ref name="Part0">P_HANDLE</Ref><Ref name="Part1">P_FRONTRING</Ref><bool name="Enabled">true</bool></Properties></Item>
+		</Item>
+
+		<Item class="Part" referent="P_MIDBAND">
+			<Properties>
+				<string name="Name">MidBand</string>
+				<token name="shape">2</token>
+				<bool name="CanCollide">false</bool><bool name="CanTouch">false</bool><bool name="Massless">true</bool>
+				<token name="Material">1088</token>
+				<Color3uint8 name="Color3uint8">4280822312</Color3uint8>
+				<token name="TopSurface">0</token><token name="BottomSurface">0</token>
+				<CoordinateFrame name="CFrame"><X>0</X><Y>0.7</Y><Z>0.6</Z><R00>0</R00><R01>0</R01><R02>1</R02><R10>0</R10><R11>1</R11><R12>0</R12><R20>-1</R20><R21>0</R21><R22>0</R22></CoordinateFrame>
+				<Vector3 name="size"><X>0.2</X><Y>0.8</Y><Z>0.8</Z></Vector3>
+			</Properties>
+			<Item class="WeldConstraint" referent="W_MIDBAND"><Properties><string name="Name">Weld</string><Ref name="Part0">P_HANDLE</Ref><Ref name="Part1">P_MIDBAND</Ref><bool name="Enabled">true</bool></Properties></Item>
+		</Item>
+
+		<Item class="Part" referent="P_REARBELL">
+			<Properties>
+				<string name="Name">RearBell</string>
+				<token name="shape">2</token>
+				<bool name="CanCollide">false</bool><bool name="CanTouch">false</bool><bool name="Massless">true</bool>
+				<token name="Material">1088</token>
+				<Color3uint8 name="Color3uint8">4280822312</Color3uint8>
+				<token name="TopSurface">0</token><token name="BottomSurface">0</token>
+				<CoordinateFrame name="CFrame"><X>0</X><Y>0.7</Y><Z>3.0</Z><R00>0</R00><R01>0</R01><R02>1</R02><R10>0</R10><R11>1</R11><R12>0</R12><R20>-1</R20><R21>0</R21><R22>0</R22></CoordinateFrame>
+				<Vector3 name="size"><X>0.6</X><Y>1</Y><Z>1</Z></Vector3>
+			</Properties>
+			<Item class="WeldConstraint" referent="W_REARBELL"><Properties><string name="Name">Weld</string><Ref name="Part0">P_HANDLE</Ref><Ref name="Part1">P_REARBELL</Ref><bool name="Enabled">true</bool></Properties></Item>
+		</Item>
+
+		<Item class="Part" referent="P_REARHOLE">
+			<Properties>
+				<string name="Name">RearHole</string>
+				<token name="shape">2</token>
+				<bool name="CanCollide">false</bool><bool name="CanTouch">false</bool><bool name="Massless">true</bool>
+				<token name="Material">256</token>
+				<Color3uint8 name="Color3uint8">4279505940</Color3uint8>
+				<token name="TopSurface">0</token><token name="BottomSurface">0</token>
+				<CoordinateFrame name="CFrame"><X>0</X><Y>0.7</Y><Z>3.31</Z><R00>0</R00><R01>0</R01><R02>1</R02><R10>0</R10><R11>1</R11><R12>0</R12><R20>-1</R20><R21>0</R21><R22>0</R22></CoordinateFrame>
+				<Vector3 name="size"><X>0.05</X><Y>0.82</Y><Z>0.82</Z></Vector3>
+			</Properties>
+			<Item class="WeldConstraint" referent="W_REARHOLE"><Properties><string name="Name">Weld</string><Ref name="Part0">P_HANDLE</Ref><Ref name="Part1">P_REARHOLE</Ref><bool name="Enabled">true</bool></Properties></Item>
+		</Item>
+
+		<Item class="Part" referent="P_FRONTHOLE">
+			<Properties>
+				<string name="Name">FrontHole</string>
+				<token name="shape">2</token>
+				<bool name="CanCollide">false</bool><bool name="CanTouch">false</bool><bool name="Massless">true</bool>
+				<token name="Material">256</token>
+				<Color3uint8 name="Color3uint8">4279505940</Color3uint8>
+				<token name="TopSurface">0</token><token name="BottomSurface">0</token>
+				<CoordinateFrame name="CFrame"><X>0</X><Y>0.7</Y><Z>-2.13</Z><R00>0</R00><R01>0</R01><R02>1</R02><R10>0</R10><R11>1</R11><R12>0</R12><R20>-1</R20><R21>0</R21><R22>0</R22></CoordinateFrame>
+				<Vector3 name="size"><X>0.05</X><Y>0.62</Y><Z>0.62</Z></Vector3>
+			</Properties>
+			<Item class="WeldConstraint" referent="W_FRONTHOLE"><Properties><string name="Name">Weld</string><Ref name="Part0">P_HANDLE</Ref><Ref name="Part1">P_FRONTHOLE</Ref><bool name="Enabled">true</bool></Properties></Item>
+		</Item>
+
+		<Item class="Part" referent="P_WARHEAD">
+			<Properties>
+				<string name="Name">Warhead</string>
+				<token name="shape">2</token>
+				<bool name="CanCollide">false</bool><bool name="CanTouch">false</bool><bool name="Massless">true</bool>
+				<token name="Material">1088</token>
+				<Color3uint8 name="Color3uint8">4285424710</Color3uint8>
+				<token name="TopSurface">0</token><token name="BottomSurface">0</token>
+				<CoordinateFrame name="CFrame"><X>0</X><Y>0.7</Y><Z>-2.45</Z><R00>0</R00><R01>0</R01><R02>1</R02><R10>0</R10><R11>1</R11><R12>0</R12><R20>-1</R20><R21>0</R21><R22>0</R22></CoordinateFrame>
+				<Vector3 name="size"><X>0.75</X><Y>0.56</Y><Z>0.56</Z></Vector3>
+			</Properties>
+			<Item class="WeldConstraint" referent="W_WARHEAD"><Properties><string name="Name">Weld</string><Ref name="Part0">P_HANDLE</Ref><Ref name="Part1">P_WARHEAD</Ref><bool name="Enabled">true</bool></Properties></Item>
+		</Item>
+
+		<Item class="Part" referent="P_WARHEADNOSE">
+			<Properties>
+				<string name="Name">WarheadNose</string>
+				<token name="shape">0</token>
+				<bool name="CanCollide">false</bool><bool name="CanTouch">false</bool><bool name="Massless">true</bool>
+				<token name="Material">1088</token>
+				<Color3uint8 name="Color3uint8">4285424710</Color3uint8>
+				<token name="TopSurface">0</token><token name="BottomSurface">0</token>
+				<CoordinateFrame name="CFrame"><X>0</X><Y>0.7</Y><Z>-2.83</Z><R00>1</R00><R01>0</R01><R02>0</R02><R10>0</R10><R11>1</R11><R12>0</R12><R20>0</R20><R21>0</R21><R22>1</R22></CoordinateFrame>
+				<Vector3 name="size"><X>0.56</X><Y>0.56</Y><Z>0.56</Z></Vector3>
+			</Properties>
+			<Item class="WeldConstraint" referent="W_WARHEADNOSE"><Properties><string name="Name">Weld</string><Ref name="Part0">P_HANDLE</Ref><Ref name="Part1">P_WARHEADNOSE</Ref><bool name="Enabled">true</bool></Properties></Item>
+		</Item>
+
+		<Item class="Part" referent="P_WARHEADTIP">
+			<Properties>
+				<string name="Name">WarheadTip</string>
+				<token name="shape">0</token>
+				<bool name="CanCollide">false</bool><bool name="CanTouch">false</bool><bool name="Massless">true</bool>
+				<token name="Material">1088</token>
+				<Color3uint8 name="Color3uint8">4282137655</Color3uint8>
+				<token name="TopSurface">0</token><token name="BottomSurface">0</token>
+				<CoordinateFrame name="CFrame"><X>0</X><Y>0.7</Y><Z>-3.1</Z><R00>1</R00><R01>0</R01><R02>0</R02><R10>0</R10><R11>1</R11><R12>0</R12><R20>0</R20><R21>0</R21><R22>1</R22></CoordinateFrame>
+				<Vector3 name="size"><X>0.24</X><Y>0.24</Y><Z>0.24</Z></Vector3>
+			</Properties>
+			<Item class="WeldConstraint" referent="W_WARHEADTIP"><Properties><string name="Name">Weld</string><Ref name="Part0">P_HANDLE</Ref><Ref name="Part1">P_WARHEADTIP</Ref><bool name="Enabled">true</bool></Properties></Item>
+		</Item>
+
+		<Item class="Part" referent="P_SHOULDER">
+			<Properties>
+				<string name="Name">ShoulderRest</string>
+				<token name="shape">1</token>
+				<bool name="CanCollide">false</bool><bool name="CanTouch">false</bool><bool name="Massless">true</bool>
+				<token name="Material">512</token>
+				<Color3uint8 name="Color3uint8">4284235816</Color3uint8>
+				<token name="TopSurface">0</token><token name="BottomSurface">0</token>
+				<CoordinateFrame name="CFrame"><X>0</X><Y>0.28</Y><Z>1.7</Z><R00>1</R00><R01>0</R01><R02>0</R02><R10>0</R10><R11>1</R11><R12>0</R12><R20>0</R20><R21>0</R21><R22>1</R22></CoordinateFrame>
+				<Vector3 name="size"><X>0.3</X><Y>0.42</Y><Z>1.1</Z></Vector3>
+			</Properties>
+			<Item class="WeldConstraint" referent="W_SHOULDER"><Properties><string name="Name">Weld</string><Ref name="Part0">P_HANDLE</Ref><Ref name="Part1">P_SHOULDER</Ref><bool name="Enabled">true</bool></Properties></Item>
+		</Item>
+
+		<Item class="Part" referent="P_FRONTGRIP">
+			<Properties>
+				<string name="Name">FrontGrip</string>
+				<token name="shape">1</token>
+				<bool name="CanCollide">false</bool><bool name="CanTouch">false</bool><bool name="Massless">true</bool>
+				<token name="Material">512</token>
+				<Color3uint8 name="Color3uint8">4284235816</Color3uint8>
+				<token name="TopSurface">0</token><token name="BottomSurface">0</token>
+				<CoordinateFrame name="CFrame"><X>0</X><Y>0.05</Y><Z>-1.0</Z><R00>1</R00><R01>0</R01><R02>0</R02><R10>0</R10><R11>1</R11><R12>0</R12><R20>0</R20><R21>0</R21><R22>1</R22></CoordinateFrame>
+				<Vector3 name="size"><X>0.24</X><Y>0.7</Y><Z>0.3</Z></Vector3>
+			</Properties>
+			<Item class="WeldConstraint" referent="W_FRONTGRIP"><Properties><string name="Name">Weld</string><Ref name="Part0">P_HANDLE</Ref><Ref name="Part1">P_FRONTGRIP</Ref><bool name="Enabled">true</bool></Properties></Item>
+		</Item>
+
+		<Item class="Part" referent="P_TRIGGER">
+			<Properties>
+				<string name="Name">Trigger</string>
+				<token name="shape">1</token>
+				<bool name="CanCollide">false</bool><bool name="CanTouch">false</bool><bool name="Massless">true</bool>
+				<token name="Material">1088</token>
+				<Color3uint8 name="Color3uint8">4279505940</Color3uint8>
+				<token name="TopSurface">0</token><token name="BottomSurface">0</token>
+				<CoordinateFrame name="CFrame"><X>0</X><Y>0.22</Y><Z>-0.3</Z><R00>1</R00><R01>0</R01><R02>0</R02><R10>0</R10><R11>1</R11><R12>0</R12><R20>0</R20><R21>0</R21><R22>1</R22></CoordinateFrame>
+				<Vector3 name="size"><X>0.08</X><Y>0.22</Y><Z>0.06</Z></Vector3>
+			</Properties>
+			<Item class="WeldConstraint" referent="W_TRIGGER"><Properties><string name="Name">Weld</string><Ref name="Part0">P_HANDLE</Ref><Ref name="Part1">P_TRIGGER</Ref><bool name="Enabled">true</bool></Properties></Item>
+		</Item>
+
+		<Item class="Part" referent="P_GUARD">
+			<Properties>
+				<string name="Name">TriggerGuard</string>
+				<token name="shape">1</token>
+				<bool name="CanCollide">false</bool><bool name="CanTouch">false</bool><bool name="Massless">true</bool>
+				<token name="Material">1088</token>
+				<Color3uint8 name="Color3uint8">4280822312</Color3uint8>
+				<token name="TopSurface">0</token><token name="BottomSurface">0</token>
+				<CoordinateFrame name="CFrame"><X>0</X><Y>0.08</Y><Z>-0.32</Z><R00>1</R00><R01>0</R01><R02>0</R02><R10>0</R10><R11>1</R11><R12>0</R12><R20>0</R20><R21>0</R21><R22>1</R22></CoordinateFrame>
+				<Vector3 name="size"><X>0.06</X><Y>0.06</Y><Z>0.5</Z></Vector3>
+			</Properties>
+			<Item class="WeldConstraint" referent="W_GUARD"><Properties><string name="Name">Weld</string><Ref name="Part0">P_HANDLE</Ref><Ref name="Part1">P_GUARD</Ref><bool name="Enabled">true</bool></Properties></Item>
+		</Item>
+
+		<Item class="Part" referent="P_SIGHTBASE">
+			<Properties>
+				<string name="Name">SightBase</string>
+				<token name="shape">1</token>
+				<bool name="CanCollide">false</bool><bool name="CanTouch">false</bool><bool name="Massless">true</bool>
+				<token name="Material">1088</token>
+				<Color3uint8 name="Color3uint8">4280822312</Color3uint8>
+				<token name="TopSurface">0</token><token name="BottomSurface">0</token>
+				<CoordinateFrame name="CFrame"><X>-0.42</X><Y>0.85</Y><Z>-0.7</Z><R00>1</R00><R01>0</R01><R02>0</R02><R10>0</R10><R11>1</R11><R12>0</R12><R20>0</R20><R21>0</R21><R22>1</R22></CoordinateFrame>
+				<Vector3 name="size"><X>0.16</X><Y>0.12</Y><Z>0.22</Z></Vector3>
+			</Properties>
+			<Item class="WeldConstraint" referent="W_SIGHTBASE"><Properties><string name="Name">Weld</string><Ref name="Part0">P_HANDLE</Ref><Ref name="Part1">P_SIGHTBASE</Ref><bool name="Enabled">true</bool></Properties></Item>
+		</Item>
+
+		<Item class="Part" referent="P_SIGHT">
+			<Properties>
+				<string name="Name">Sight</string>
+				<token name="shape">1</token>
+				<bool name="CanCollide">false</bool><bool name="CanTouch">false</bool><bool name="Massless">true</bool>
+				<token name="Material">1088</token>
+				<Color3uint8 name="Color3uint8">4280822312</Color3uint8>
+				<token name="TopSurface">0</token><token name="BottomSurface">0</token>
+				<CoordinateFrame name="CFrame"><X>-0.52</X><Y>0.97</Y><Z>-0.7</Z><R00>1</R00><R01>0</R01><R02>0</R02><R10>0</R10><R11>1</R11><R12>0</R12><R20>0</R20><R21>0</R21><R22>1</R22></CoordinateFrame>
+				<Vector3 name="size"><X>0.18</X><Y>0.2</Y><Z>0.5</Z></Vector3>
+			</Properties>
+			<Item class="WeldConstraint" referent="W_SIGHT"><Properties><string name="Name">Weld</string><Ref name="Part0">P_HANDLE</Ref><Ref name="Part1">P_SIGHT</Ref><bool name="Enabled">true</bool></Properties></Item>
+		</Item>
+
+		<Item class="Part" referent="P_LENS">
+			<Properties>
+				<string name="Name">SightLens</string>
+				<token name="shape">2</token>
+				<bool name="CanCollide">false</bool><bool name="CanTouch">false</bool><bool name="Massless">true</bool>
+				<token name="Material">1568</token>
+				<float name="Reflectance">0.3</float>
+				<float name="Transparency">0.2</float>
+				<Color3uint8 name="Color3uint8">4282145400</Color3uint8>
+				<token name="TopSurface">0</token><token name="BottomSurface">0</token>
+				<CoordinateFrame name="CFrame"><X>-0.52</X><Y>0.97</Y><Z>-0.96</Z><R00>0</R00><R01>0</R01><R02>1</R02><R10>0</R10><R11>1</R11><R12>0</R12><R20>-1</R20><R21>0</R21><R22>0</R22></CoordinateFrame>
+				<Vector3 name="size"><X>0.03</X><Y>0.16</Y><Z>0.16</Z></Vector3>
+			</Properties>
+			<Item class="WeldConstraint" referent="W_LENS"><Properties><string name="Name">Weld</string><Ref name="Part0">P_HANDLE</Ref><Ref name="Part1">P_LENS</Ref><bool name="Enabled">true</bool></Properties></Item>
+		</Item>
+
+		<Item class="Part" referent="P_BATTERY">
+			<Properties>
+				<string name="Name">BatteryBox</string>
+				<token name="shape">1</token>
+				<bool name="CanCollide">false</bool><bool name="CanTouch">false</bool><bool name="Massless">true</bool>
+				<token name="Material">1088</token>
+				<Color3uint8 name="Color3uint8">4282137655</Color3uint8>
+				<token name="TopSurface">0</token><token name="BottomSurface">0</token>
+				<CoordinateFrame name="CFrame"><X>0.4</X><Y>0.6</Y><Z>0.95</Z><R00>1</R00><R01>0</R01><R02>0</R02><R10>0</R10><R11>1</R11><R12>0</R12><R20>0</R20><R21>0</R21><R22>1</R22></CoordinateFrame>
+				<Vector3 name="size"><X>0.2</X><Y>0.3</Y><Z>0.5</Z></Vector3>
+			</Properties>
+			<Item class="WeldConstraint" referent="W_BATTERY"><Properties><string name="Name">Weld</string><Ref name="Part0">P_HANDLE</Ref><Ref name="Part1">P_BATTERY</Ref><bool name="Enabled">true</bool></Properties></Item>
+		</Item>
+
+		<!-- ===================== СЕТЬ ===================== -->
+		<Item class="Folder" referent="F_REMOTES">
+			<Properties><string name="Name">Remotes</string></Properties>
+			<Item class="RemoteEvent" referent="R_FIRE">
+				<Properties><string name="Name">Fire</string></Properties>
+			</Item>
+		</Item>
+
+		<!-- ===================== СЕРВЕР ===================== -->
+		<Item class="Script" referent="SC_SERVER">
+			<Properties>
+				<string name="Name">BazookaServer</string>
+				<bool name="Disabled">false</bool>
+				<ProtectedString name="Source"><![CDATA[-- Базука M1A1 :: серверная логика (ракета, взрыв, разрушение)
+local Tool = script.Parent
+local Handle = Tool:WaitForChild("Handle")
+local Tube = Tool:WaitForChild("Tube")
+local Muzzle = Tube:WaitForChild("Muzzle")
+local Rear = Tube:WaitForChild("Rear")
+local FireRemote = Tool:WaitForChild("Remotes"):WaitForChild("Fire")
+
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local Debris = game:GetService("Debris")
+local TweenService = game:GetService("TweenService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local CONFIG = {
+	RocketSpeed = 150,          -- скорость ракеты (studs/s)
+	RocketDrop = 6,             -- небольшое падение траектории
+	MaxDistance = 1500,         -- дальность полёта
+	Spread = 0.6,               -- разброс в градусах
+
+	Radius = 24,                -- радиус взрыва
+	MaxDamage = 130,            -- урон в эпицентре
+	MinDamage = 6,              -- урон на краю радиуса
+	DamageFalloff = 1.6,        -- чем больше, тем резче падает урон с расстоянием
+	MaxForce = 220,             -- сила отброса в эпицентре
+	UpwardBias = 0.35,          -- подброс вверх
+	BreakRadiusFactor = 0.8,    -- доля радиуса, где детали отрываются и отвязываются
+	MaxBreakSize = 90,          -- слишком огромные детали не отрываются (только толкаются/обгорают)
+	SelfDamageMultiplier = 0.5, -- урон себе
+
+	ReloadTime = 2.8,
+	Cooldown = 0.35,
+
+	DebrisLifetime = 10,        -- через сколько секунд взорванные детали пропадают
+
+	-- Детали с этими именами (без учёта регистра) взрыв никак не трогает
+	ImmuneNames = { baseplate = true },
+}
+
+local SMOKE = "rbxasset://textures/particles/smoke_main.dds"
+local FIRE = "rbxasset://textures/particles/fire_main.dds"
+local SPARK = "rbxasset://textures/particles/sparkles_main.dds"
+
+local OLIVE = Color3.fromRGB(74, 83, 52)
+local TAN = Color3.fromRGB(110, 100, 70)
+
+-- ---------- общий RemoteEvent эффектов + клиентский скрипт тряски у всех игроков ----------
+local FX = ReplicatedStorage:FindFirstChild("BazookaFX")
+if not FX then
+	FX = Instance.new("RemoteEvent")
+	FX.Name = "BazookaFX"
+	FX.Parent = ReplicatedStorage
+end
+
+local FXTemplate = script:WaitForChild("ExplosionFXClient")
+local function giveFX(plr)
+	local pg = plr:FindFirstChildOfClass("PlayerGui") or plr:WaitForChild("PlayerGui", 10)
+	if not pg or pg:FindFirstChild("BazookaFXGui") then return end
+	local holder = Instance.new("ScreenGui")
+	holder.Name = "BazookaFXGui"
+	holder.ResetOnSpawn = false
+	local s = FXTemplate:Clone()
+	s.Disabled = false
+	s.Parent = holder
+	holder.Parent = pg
+end
+for _, p in ipairs(Players:GetPlayers()) do task.spawn(giveFX, p) end
+Players.PlayerAdded:Connect(giveFX)
+
+-- ---------- страховочная сварка деталей ----------
+for _, part in ipairs(Tool:GetChildren()) do
+	if part:IsA("BasePart") and part ~= Handle and not part:FindFirstChildOfClass("WeldConstraint") then
+		local w = Instance.new("WeldConstraint")
+		w.Part0 = Handle
+		w.Part1 = part
+		w.Parent = part
+	end
+end
+
+-- ---------- эффекты на самой базуке ----------
+local function newEmitter(parent, props)
+	local e = Instance.new("ParticleEmitter")
+	e.Enabled = false
+	for k, v in pairs(props) do e[k] = v end
+	e.Parent = parent
+	return e
+end
+
+local MuzzleFlash = newEmitter(Muzzle, {
+	Texture = FIRE, LightEmission = 1, LightInfluence = 0,
+	Color = ColorSequence.new(Color3.fromRGB(255, 235, 160), Color3.fromRGB(255, 110, 30)),
+	Size = NumberSequence.new(1.6, 0),
+	Transparency = NumberSequence.new(0.1, 1),
+	Lifetime = NumberRange.new(0.06, 0.14),
+	Speed = NumberRange.new(12, 25),
+	SpreadAngle = Vector2.new(12, 12),
+	EmissionDirection = Enum.NormalId.Right,
+})
+local MuzzleSmoke = newEmitter(Muzzle, {
+	Texture = SMOKE,
+	Color = ColorSequence.new(Color3.fromRGB(190, 185, 175)),
+	Size = NumberSequence.new(0.8, 3.5),
+	Transparency = NumberSequence.new(0.4, 1),
+	Lifetime = NumberRange.new(0.8, 1.6),
+	Speed = NumberRange.new(4, 9),
+	Drag = 3,
+	SpreadAngle = Vector2.new(20, 20),
+	Rotation = NumberRange.new(0, 360),
+	RotSpeed = NumberRange.new(-60, 60),
+	EmissionDirection = Enum.NormalId.Right,
+})
+local BackBlast = newEmitter(Rear, {
+	Texture = SMOKE,
+	Color = ColorSequence.new(Color3.fromRGB(215, 205, 190), Color3.fromRGB(120, 115, 110)),
+	Size = NumberSequence.new(1, 6),
+	Transparency = NumberSequence.new(0.2, 1),
+	Lifetime = NumberRange.new(1, 2.2),
+	Speed = NumberRange.new(18, 35),
+	Drag = 4,
+	SpreadAngle = Vector2.new(25, 25),
+	Rotation = NumberRange.new(0, 360),
+	RotSpeed = NumberRange.new(-80, 80),
+	EmissionDirection = Enum.NormalId.Left,
+})
+local BackFire = newEmitter(Rear, {
+	Texture = FIRE, LightEmission = 1, LightInfluence = 0,
+	Color = ColorSequence.new(Color3.fromRGB(255, 200, 120), Color3.fromRGB(255, 90, 20)),
+	Size = NumberSequence.new(1.4, 0),
+	Lifetime = NumberRange.new(0.08, 0.18),
+	Speed = NumberRange.new(20, 35),
+	SpreadAngle = Vector2.new(15, 15),
+	EmissionDirection = Enum.NormalId.Left,
+})
+local FlashLight = Instance.new("PointLight")
+FlashLight.Color = Color3.fromRGB(255, 170, 80)
+FlashLight.Range = 16
+FlashLight.Brightness = 0
+FlashLight.Shadows = true
+FlashLight.Parent = Muzzle
+
+-- ---------- состояние ----------
+local WARHEAD_PARTS = { "Warhead", "WarheadNose", "WarheadTip" }
+local function setLoaded(v)
+	Tool:SetAttribute("Loaded", v)
+	for _, n in ipairs(WARHEAD_PARTS) do
+		local p = Tool:FindFirstChild(n)
+		if p then p.Transparency = v and 0 or 1 end
+	end
+end
+Tool:SetAttribute("ReloadTime", CONFIG.ReloadTime)
+Tool:SetAttribute("Reloading", false)
+setLoaded(true)
+
+local function reload()
+	Tool:SetAttribute("ReloadEnd", workspace:GetServerTimeNow() + CONFIG.ReloadTime)
+	Tool:SetAttribute("Reloading", true)
+	task.wait(0.4)
+	if Handle:FindFirstChild("ReloadSound") then Handle.ReloadSound:Play() end
+	task.wait(CONFIG.ReloadTime - 0.4)
+	Tool:SetAttribute("Reloading", false)
+	setLoaded(true)
+end
+
+-- ---------- утилиты взрыва ----------
+local function isImmune(part)
+	if part:IsA("Terrain") then return true end
+	if CONFIG.ImmuneNames[string.lower(part.Name)] then return true end
+	if part:GetAttribute("Indestructible") then return true end
+	if part:FindFirstAncestorOfClass("Tool") then return true end
+	return false
+end
+
+-- ближайшая точка на поверхности детали (чтобы большие стены считались правильно)
+local function closestPoint(part, pos)
+	local rel = part.CFrame:PointToObjectSpace(pos)
+	local h = part.Size / 2
+	return part.CFrame:PointToWorldSpace(Vector3.new(
+		math.clamp(rel.X, -h.X, h.X),
+		math.clamp(rel.Y, -h.Y, h.Y),
+		math.clamp(rel.Z, -h.Z, h.Z)))
+end
+
+local function tagHumanoid(hum, attacker)
+	local old = hum:FindFirstChild("creator")
+	if old then old:Destroy() end
+	if attacker then
+		local t = Instance.new("ObjectValue")
+		t.Name = "creator"
+		t.Value = attacker
+		t.Parent = hum
+		Debris:AddItem(t, 5)
+	end
+end
+
+-- взорванная деталь исчезает через DebrisLifetime секунд (последнюю секунду плавно тает)
+local function scheduleRemoval(part)
+	if part:GetAttribute("ExplodedDebris") then return end
+	part:SetAttribute("ExplodedDebris", true)
+	local life = CONFIG.DebrisLifetime
+	task.delay(math.max(life - 1, 0), function()
+		if part.Parent then
+			TweenService:Create(part, TweenInfo.new(1), { Transparency = 1 }):Play()
+			for _, d in ipairs(part:GetDescendants()) do
+				if d:IsA("Decal") or d:IsA("Texture") then
+					TweenService:Create(d, TweenInfo.new(1), { Transparency = 1 }):Play()
+				end
+			end
+		end
+	end)
+	Debris:AddItem(part, life)
+end
+
+local function pushPart(part, origin, strength)
+	if part.Anchored or not part.Parent then return end
+	pcall(function() part:SetNetworkOwner(nil) end)
+	local dir = part.Position - origin
+	dir = dir.Magnitude > 0.01 and dir.Unit or Vector3.yAxis
+	dir = (dir + Vector3.new(0, CONFIG.UpwardBias, 0)).Unit
+	local mass = part:GetMass()
+	part:ApplyImpulse(dir * CONFIG.MaxForce * strength * mass)
+	part:ApplyAngularImpulse(Vector3.new(math.random() - 0.5, math.random() - 0.5, math.random() - 0.5) * CONFIG.MaxForce * strength * mass * 0.6)
+end
+
+-- ---------- визуал взрыва ----------
+local function explosionFX(pos, R)
+	local e = Instance.new("Explosion")
+	e.Position = pos
+	e.BlastRadius = R * 0.6
+	e.BlastPressure = 0
+	e.DestroyJointRadiusPercent = 0
+	e.ExplosionType = Enum.ExplosionType.NoCraters
+	e.Parent = workspace
+
+	local function fxPart(shape, size, cf)
+		local p = Instance.new("Part")
+		p.Shape = shape
+		p.Size = size
+		p.CFrame = cf
+		p.Anchored = true
+		p.CanCollide = false
+		p.CanQuery = false
+		p.CanTouch = false
+		p.CastShadow = false
+		p.Material = Enum.Material.Neon
+		p.Parent = workspace
+		return p
+	end
+
+	-- огненный шар
+	local ball = fxPart(Enum.PartType.Ball, Vector3.one * 2, CFrame.new(pos))
+	ball.Color = Color3.fromRGB(255, 190, 90)
+	TweenService:Create(ball, TweenInfo.new(0.4, Enum.EasingStyle.Quint, Enum.EasingDirection.Out),
+		{ Size = Vector3.one * R * 0.9, Transparency = 1, Color = Color3.fromRGB(255, 70, 20) }):Play()
+	Debris:AddItem(ball, 0.5)
+
+	-- ударная волна
+	local ring = fxPart(Enum.PartType.Cylinder, Vector3.new(0.3, 2, 2), CFrame.new(pos) * CFrame.Angles(0, 0, math.rad(90)))
+	ring.Color = Color3.fromRGB(255, 235, 200)
+	ring.Transparency = 0.35
+	TweenService:Create(ring, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+		{ Size = Vector3.new(0.3, R * 2.6, R * 2.6), Transparency = 1 }):Play()
+	Debris:AddItem(ring, 0.6)
+
+	-- невидимый держатель для частиц/света/звука
+	local holder = fxPart(Enum.PartType.Block, Vector3.one, CFrame.new(pos))
+	holder.Transparency = 1
+
+	local light = Instance.new("PointLight")
+	light.Color = Color3.fromRGB(255, 150, 60)
+	light.Range = math.min(R * 2.5, 60)
+	light.Brightness = 10
+	light.Shadows = true
+	light.Parent = holder
+	TweenService:Create(light, TweenInfo.new(0.9, Enum.EasingStyle.Quad), { Brightness = 0 }):Play()
+
+	local fire = newEmitter(holder, {
+		Texture = FIRE, LightEmission = 1, LightInfluence = 0,
+		Color = ColorSequence.new(Color3.fromRGB(255, 220, 140), Color3.fromRGB(255, 80, 20)),
+		Size = NumberSequence.new(R * 0.25, 0),
+		Transparency = NumberSequence.new(0, 1),
+		Lifetime = NumberRange.new(0.3, 0.7),
+		Speed = NumberRange.new(R * 0.6, R * 1.4),
+		Drag = 4,
+		SpreadAngle = Vector2.new(180, 180),
+		Rotation = NumberRange.new(0, 360),
+		RotSpeed = NumberRange.new(-120, 120),
+	})
+	local smoke = newEmitter(holder, {
+		Texture = SMOKE,
+		Color = ColorSequence.new(Color3.fromRGB(70, 66, 60), Color3.fromRGB(140, 135, 128)),
+		Size = NumberSequence.new(R * 0.2, R * 0.75),
+		Transparency = NumberSequence.new(0.15, 1),
+		Lifetime = NumberRange.new(3, 5.5),
+		Speed = NumberRange.new(R * 0.3, R * 0.7),
+		Drag = 2.5,
+		Acceleration = Vector3.new(0, 3, 0),
+		SpreadAngle = Vector2.new(180, 180),
+		Rotation = NumberRange.new(0, 360),
+		RotSpeed = NumberRange.new(-30, 30),
+		Rate = 14,
+	})
+	local sparks = newEmitter(holder, {
+		Texture = SPARK, LightEmission = 1, LightInfluence = 0,
+		Color = ColorSequence.new(Color3.fromRGB(255, 200, 90)),
+		Size = NumberSequence.new(0.35, 0),
+		Lifetime = NumberRange.new(0.5, 1.3),
+		Speed = NumberRange.new(30, 65),
+		Acceleration = Vector3.new(0, -45, 0),
+		SpreadAngle = Vector2.new(180, 180),
+	})
+	fire:Emit(35)
+	smoke:Emit(22)
+	sparks:Emit(45)
+	smoke.Enabled = true
+	task.delay(1.6, function() smoke.Enabled = false end)
+
+	local boom = Instance.new("Sound")
+	boom.SoundId = "rbxassetid://165969964"
+	boom.Volume = 2.5
+	boom.RollOffMinDistance = 20
+	boom.RollOffMaxDistance = 900
+	boom.PlaybackSpeed = 0.85 + math.random() * 0.2
+	boom.Parent = holder
+	boom:Play()
+	Debris:AddItem(holder, 8)
+
+	-- обломки
+	for _ = 1, 9 do
+		local c = Instance.new("Part")
+		c.Name = "ExplosionChunk"
+		c.Size = Vector3.new(math.random(2, 7) / 10, math.random(2, 7) / 10, math.random(2, 7) / 10)
+		c.Color = Color3.fromRGB(40, 36, 32):Lerp(Color3.fromRGB(95, 85, 72), math.random())
+		c.Material = Enum.Material.Slate
+		c.CFrame = CFrame.new(pos + Vector3.new(math.random() - 0.5, 0.6, math.random() - 0.5))
+			* CFrame.Angles(math.random() * 6, math.random() * 6, 0)
+		c.CanQuery = false
+		c.CanTouch = false
+		c.Parent = workspace
+		c.AssemblyLinearVelocity = Vector3.new(math.random(-30, 30), math.random(25, 60), math.random(-30, 30))
+		c.AssemblyAngularVelocity = Vector3.new(math.random(-20, 20), math.random(-20, 20), math.random(-20, 20))
+		Debris:AddItem(c, 4 + math.random() * 2)
+	end
+end
+
+-- ---------- сам взрыв: чем ближе — тем сильнее ----------
+local function explode(pos, attacker)
+	local R = CONFIG.Radius
+	local parts = workspace:GetPartBoundsInRadius(pos, R, OverlapParams.new())
+
+	local humans = {}
+	local props = {}
+	for _, part in ipairs(parts) do
+		if not isImmune(part) then
+			local d = (closestPoint(part, pos) - pos).Magnitude
+			local k = math.clamp(1 - d / R, 0, 1) -- 1 = эпицентр, 0 = край
+			if k > 0 then
+				local model = part:FindFirstAncestorOfClass("Model")
+				local hum = model and model:FindFirstChildOfClass("Humanoid")
+				if hum then
+					local cur = humans[hum]
+					if not cur or k > cur.k then humans[hum] = { k = k, model = model } end
+				else
+					table.insert(props, { part = part, k = k })
+				end
+			end
+		end
+	end
+
+	-- 1) отрываем блоки и детали моделей (только достаточно близко к эпицентру)
+	for _, e in ipairs(props) do
+		local part = e.part
+		if e.k >= 1 - CONFIG.BreakRadiusFactor and part.Size.Magnitude <= CONFIG.MaxBreakSize then
+			for _, j in ipairs(part:GetJoints()) do
+				j:Destroy()
+			end
+			part.Anchored = false
+		end
+	end
+
+	-- 2) отбрасываем и обжигаем — сила растёт к центру
+	for _, e in ipairs(props) do
+		local part = e.part
+		local strength = e.k ^ 1.5
+		pushPart(part, pos, strength)
+		if not part.Anchored then
+			scheduleRemoval(part)
+		end
+		if e.k > 0.55 then
+			part.Color = part.Color:Lerp(Color3.fromRGB(28, 24, 22), math.clamp((e.k - 0.55) * 1.4, 0, 0.75))
+		end
+	end
+
+	-- 3) урон персонажам
+	for hum, e in pairs(humans) do
+		if hum.Health > 0 then
+			local dmg = CONFIG.MinDamage + (CONFIG.MaxDamage - CONFIG.MinDamage) * (e.k ^ CONFIG.DamageFalloff)
+			local victim = Players:GetPlayerFromCharacter(e.model)
+			if victim and victim == attacker then dmg = dmg * CONFIG.SelfDamageMultiplier end
+			tagHumanoid(hum, attacker)
+			hum:TakeDamage(dmg)
+
+			if not victim then
+				-- NPC: отброс делаем на сервере (игроков толкает их собственный клиент)
+				local root = hum.RootPart
+				if root then
+					local dir = root.Position - pos
+					dir = ((dir.Magnitude > 0.01 and dir.Unit or Vector3.yAxis) + Vector3.new(0, 0.6, 0)).Unit
+					root.AssemblyLinearVelocity += dir * CONFIG.MaxForce * 0.55 * e.k
+					if e.k > 0.35 then hum:ChangeState(Enum.HumanoidStateType.FallingDown) end
+				end
+			end
+			if hum.Health <= 0 then
+				task.defer(function()
+					for _, p in ipairs(e.model:GetDescendants()) do
+						if p:IsA("BasePart") then pushPart(p, pos, e.k * 0.8) end
+					end
+				end)
+			end
+		end
+	end
+
+	explosionFX(pos, R)
+	FX:FireAllClients("Explosion", pos, R, CONFIG.MaxForce)
+end
+
+-- ---------- ракета ----------
+local function makeRocket(cf)
+	local model = Instance.new("Model")
+	model.Name = "BazookaRocket"
+
+	local function rPart(name, shape, size, color, offset)
+		local p = Instance.new("Part")
+		p.Name = name
+		p.Shape = shape
+		p.Size = size
+		p.Color = color
+		p.Material = Enum.Material.Metal
+		p.CanCollide = false
+		p.CanQuery = false
+		p.CanTouch = false
+		p.Massless = true
+		p.CFrame = offset
+		p.Parent = model
+		return p
+	end
+
+	local body = rPart("Body", Enum.PartType.Cylinder, Vector3.new(1.6, 0.5, 0.5), OLIVE, cf * CFrame.Angles(0, math.rad(90), 0))
+	body.Anchored = true
+	model.PrimaryPart = body
+
+	local nose = rPart("Nose", Enum.PartType.Ball, Vector3.one * 0.5, TAN, body.CFrame * CFrame.new(0.8, 0, 0))
+	local tip = rPart("Tip", Enum.PartType.Ball, Vector3.one * 0.22, Color3.fromRGB(60, 60, 55), body.CFrame * CFrame.new(1.05, 0, 0))
+	for _, p in ipairs({ nose, tip }) do
+		local w = Instance.new("WeldConstraint")
+		w.Part0 = body
+		w.Part1 = p
+		w.Parent = p
+	end
+	for i = 0, 3 do
+		local fin = rPart("Fin", Enum.PartType.Block, Vector3.new(0.45, 0.04, 0.75), Color3.fromRGB(50, 52, 46),
+			body.CFrame * CFrame.new(-0.65, 0, 0) * CFrame.Angles(math.rad(45 + 90 * i), 0, 0))
+		local w = Instance.new("WeldConstraint")
+		w.Part0 = body
+		w.Part1 = fin
+		w.Parent = fin
+	end
+
+	local a0 = Instance.new("Attachment"); a0.Position = Vector3.new(-0.8, 0.25, 0); a0.Parent = body
+	local a1 = Instance.new("Attachment"); a1.Position = Vector3.new(-0.8, -0.25, 0); a1.Parent = body
+	local trail = Instance.new("Trail")
+	trail.Attachment0 = a0
+	trail.Attachment1 = a1
+	trail.Lifetime = 0.7
+	trail.FaceCamera = true
+	trail.Color = ColorSequence.new(Color3.fromRGB(255, 200, 120), Color3.fromRGB(150, 145, 140))
+	trail.Transparency = NumberSequence.new(0.2, 1)
+	trail.WidthScale = NumberSequence.new(0.6, 2.5)
+	trail.Parent = body
+
+	local exhaust = Instance.new("Attachment"); exhaust.Position = Vector3.new(-0.85, 0, 0); exhaust.Parent = body
+	local flame = newEmitter(exhaust, {
+		Texture = FIRE, LightEmission = 1, LightInfluence = 0,
+		Color = ColorSequence.new(Color3.fromRGB(255, 230, 150), Color3.fromRGB(255, 90, 20)),
+		Size = NumberSequence.new(0.8, 0),
+		Lifetime = NumberRange.new(0.08, 0.18),
+		Speed = NumberRange.new(4, 8),
+		Rate = 150,
+		EmissionDirection = Enum.NormalId.Left,
+	})
+	local smoke = newEmitter(exhaust, {
+		Texture = SMOKE,
+		Color = ColorSequence.new(Color3.fromRGB(200, 195, 188)),
+		Size = NumberSequence.new(0.6, 2.8),
+		Transparency = NumberSequence.new(0.35, 1),
+		Lifetime = NumberRange.new(1, 2),
+		Speed = NumberRange.new(1, 3),
+		Rate = 70,
+		Rotation = NumberRange.new(0, 360),
+		RotSpeed = NumberRange.new(-40, 40),
+		EmissionDirection = Enum.NormalId.Left,
+	})
+	flame.Enabled = true
+	smoke.Enabled = true
+
+	local light = Instance.new("PointLight")
+	light.Color = Color3.fromRGB(255, 160, 70)
+	light.Range = 12
+	light.Brightness = 3
+	light.Parent = body
+
+	local whoosh = Instance.new("Sound")
+	whoosh.SoundId = "rbxasset://sounds/Rocket whoosh 01.wav"
+	whoosh.Looped = true
+	whoosh.Volume = 0.8
+	whoosh.RollOffMaxDistance = 300
+	whoosh.Parent = body
+
+	model.Parent = workspace
+	whoosh:Play()
+	return model, body
+end
+
+local function launch(attacker, char, origin, dir)
+	local model, body = makeRocket(CFrame.lookAt(origin, origin + dir))
+	local params = RaycastParams.new()
+	params.FilterType = Enum.RaycastFilterType.Exclude
+	params.FilterDescendantsInstances = { char, model, Tool }
+	params.IgnoreWater = true
+
+	local pos = origin
+	local vel = dir * CONFIG.RocketSpeed
+	local traveled = 0
+	local conn
+	conn = RunService.Heartbeat:Connect(function(dt)
+		if not model.Parent then conn:Disconnect() return end
+		vel += Vector3.new(0, -CONFIG.RocketDrop, 0) * dt
+		local step = vel * dt
+		local hit = workspace:Raycast(pos, step, params)
+		if hit then
+			conn:Disconnect()
+			model:Destroy()
+			explode(hit.Position + hit.Normal * 0.3, attacker)
+			return
+		end
+		pos += step
+		traveled += step.Magnitude
+		body.CFrame = CFrame.lookAt(pos, pos + vel) * CFrame.Angles(0, math.rad(90), 0)
+		if traveled > CONFIG.MaxDistance then
+			conn:Disconnect()
+			model:Destroy()
+			explode(pos, attacker)
+		end
+	end)
+end
+
+-- ---------- выстрел ----------
+local lastFire = 0
+FireRemote.OnServerEvent:Connect(function(plr, target)
+	local char = Tool.Parent
+	if not char or Players:GetPlayerFromCharacter(char) ~= plr then return end
+	local hum = char:FindFirstChildOfClass("Humanoid")
+	if not hum or hum.Health <= 0 then return end
+	if typeof(target) ~= "Vector3" then return end
+	if Tool:GetAttribute("Loaded") ~= true or Tool:GetAttribute("Reloading") then return end
+	if os.clock() - lastFire < CONFIG.Cooldown then return end
+	lastFire = os.clock()
+
+	setLoaded(false)
+
+	local origin = Muzzle.WorldPosition
+	local dir = target - origin
+	if dir.Magnitude < 2 then dir = Tube.CFrame.RightVector end
+	local s = CONFIG.Spread
+	dir = (CFrame.lookAt(Vector3.zero, dir.Unit)
+		* CFrame.Angles(math.rad((math.random() * 2 - 1) * s), math.rad((math.random() * 2 - 1) * s), 0)).LookVector
+
+	if Handle:FindFirstChild("FireSound") then Handle.FireSound:Play() end
+	MuzzleFlash:Emit(25)
+	MuzzleSmoke:Emit(12)
+	BackBlast:Emit(40)
+	BackFire:Emit(25)
+	FlashLight.Brightness = 7
+	TweenService:Create(FlashLight, TweenInfo.new(0.18), { Brightness = 0 }):Play()
+	FX:FireClient(plr, "Recoil")
+
+	launch(plr, char, origin, dir)
+	task.delay(CONFIG.Cooldown, reload)
+end)
+]]></ProtectedString>
+			</Properties>
+
+			<Item class="LocalScript" referent="SC_FXCLIENT">
+				<Properties>
+					<string name="Name">ExplosionFXClient</string>
+					<bool name="Disabled">true</bool>
+					<ProtectedString name="Source"><![CDATA[-- Тряска камеры / вспышка / отброс: чем ближе к взрыву — тем сильнее
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local Lighting = game:GetService("Lighting")
+local TweenService = game:GetService("TweenService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local player = Players.LocalPlayer
+local remote = ReplicatedStorage:WaitForChild("BazookaFX")
+
+local shakes = {}
+local function addShake(mag, dur, freq)
+	table.insert(shakes, { start = os.clock(), dur = dur, mag = mag, freq = freq, seed = math.random() * 1000 })
+end
+
+RunService:BindToRenderStep("BazookaShake", Enum.RenderPriority.Camera.Value + 1, function()
+	if #shakes == 0 then return end
+	local now = os.clock()
+	local x, y, z = 0, 0, 0
+	for i = #shakes, 1, -1 do
+		local s = shakes[i]
+		local t = (now - s.start) / s.dur
+		if t >= 1 then
+			table.remove(shakes, i)
+		else
+			local a = s.mag * (1 - t) ^ 2
+			x += math.noise(now * s.freq, s.seed) * a
+			y += math.noise(s.seed, now * s.freq) * a
+			z += math.noise(now * s.freq * 0.5, s.seed + 7) * a * 0.5
+		end
+	end
+	local cam = workspace.CurrentCamera
+	cam.CFrame = cam.CFrame * CFrame.Angles(math.rad(x), math.rad(y), math.rad(z))
+end)
+
+local cc = Instance.new("ColorCorrectionEffect")
+cc.Name = "BazookaFlash"
+cc.Parent = Lighting
+local blur = Instance.new("BlurEffect")
+blur.Name = "BazookaBlur"
+blur.Size = 0
+blur.Parent = Lighting
+
+remote.OnClientEvent:Connect(function(kind, pos, radius, force, intensity)
+	intensity = intensity or 1 -- 1 = базука, меньше = слабее (граната)
+	if kind == "Recoil" then
+		addShake(2.2, 0.35, 22)
+		return
+	end
+	if kind ~= "Explosion" then return end
+
+	local cam = workspace.CurrentCamera
+	local char = player.Character
+	local root = char and char:FindFirstChild("HumanoidRootPart")
+	local hum = char and char:FindFirstChildOfClass("Humanoid")
+	local refPos = root and root.Position or cam.CFrame.Position
+	local d = (refPos - pos).Magnitude
+
+	-- тряска ощущается далеко (5 радиусов), но сильно растёт к эпицентру
+	local k = math.clamp(1 - d / (radius * 5), 0, 1)
+	if k > 0 then
+		local k2 = k * k
+		addShake((9 * k2 + 0.6 * k) * intensity, (0.4 + 1.5 * k) * (0.5 + 0.5 * intensity), 12 + 12 * k)
+	end
+
+	-- вспышка и контузия вблизи
+	if k > 0.45 then
+		local kk = (k - 0.45) / 0.55 * intensity
+		cc.Brightness = 0.55 * kk
+		cc.Contrast = 0.2 * kk
+		cc.TintColor = Color3.fromRGB(255, 225, 190)
+		TweenService:Create(cc, TweenInfo.new(0.5 + kk, Enum.EasingStyle.Quad),
+			{ Brightness = 0, Contrast = 0, TintColor = Color3.new(1, 1, 1) }):Play()
+		blur.Size = 22 * kk
+		TweenService:Create(blur, TweenInfo.new(0.8 + kk * 1.5, Enum.EasingStyle.Quad), { Size = 0 }):Play()
+	end
+
+	-- отброс своего персонажа
+	if root and hum and hum.Health > 0 then
+		local v = root.Position - pos
+		local kk = math.clamp(1 - v.Magnitude / radius, 0, 1)
+		if kk > 0 then
+			local dir = ((v.Magnitude > 0.01 and v.Unit or Vector3.yAxis) + Vector3.new(0, 0.6, 0)).Unit
+			root.AssemblyLinearVelocity += dir * (force or 200) * 0.55 * kk
+			if kk > 0.35 then hum:ChangeState(Enum.HumanoidStateType.FallingDown) end
+		end
+	end
+end)
+]]></ProtectedString>
+				</Properties>
+			</Item>
+		</Item>
+
+		<!-- ===================== КЛИЕНТ / HUD ===================== -->
+		<Item class="LocalScript" referent="SC_CLIENT">
+			<Properties>
+				<string name="Name">BazookaClient</string>
+				<bool name="Disabled">false</bool>
+				<ProtectedString name="Source"><![CDATA[-- Базука M1A1 :: клиент (стрельба + нижняя панель HUD)
+local Players = game:GetService("Players")
+local TweenService = game:GetService("TweenService")
+local RunService = game:GetService("RunService")
+
+local Tool = script.Parent
+local player = Players.LocalPlayer
+local FireRemote = Tool:WaitForChild("Remotes"):WaitForChild("Fire")
+
+local TITLE_FONT = Font.new("rbxasset://fonts/families/RussoOne.json", Enum.FontWeight.Regular)
+local TEXT_FONT = Font.new("rbxasset://fonts/families/Montserrat.json", Enum.FontWeight.SemiBold)
+local TEXT_BOLD = Font.new("rbxasset://fonts/families/Montserrat.json", Enum.FontWeight.Bold)
+
+local ACCENT = Color3.fromRGB(255, 176, 64)
+local READY = Color3.fromRGB(130, 225, 120)
+local DANGER = Color3.fromRGB(235, 80, 65)
+local MUTED = Color3.fromRGB(165, 170, 155)
+
+local CURSOR_READY = "rbxasset://textures/GunCursor.png"
+local CURSOR_WAIT = "rbxasset://textures/GunWaitCursor.png"
+
+local HIDDEN_POS = UDim2.new(0.5, 0, 1, 140)
+local SHOWN_POS = UDim2.new(0.5, 0, 1, -74)
+
+local gui, ui, renderConn, mouse
+local equipped = false
+
+local function new(class, props, parent)
+	local obj = Instance.new(class)
+	for k, v in pairs(props) do obj[k] = v end
+	obj.Parent = parent
+	return obj
+end
+
+local function label(props, parent)
+	props.BackgroundTransparency = 1
+	props.TextXAlignment = props.TextXAlignment or Enum.TextXAlignment.Left
+	props.TextYAlignment = props.TextYAlignment or Enum.TextYAlignment.Center
+	return new("TextLabel", props, parent)
+end
+
+local function buildHUD()
+	local screen = new("ScreenGui", {
+		Name = "BazookaHUD", ResetOnSpawn = true, DisplayOrder = 5,
+		ZIndexBehavior = Enum.ZIndexBehavior.Sibling,
+	}, nil)
+
+	local panel = new("Frame", {
+		Name = "Panel", AnchorPoint = Vector2.new(0.5, 1), Position = HIDDEN_POS,
+		Size = UDim2.fromOffset(390, 96), BackgroundColor3 = Color3.new(1, 1, 1),
+		BackgroundTransparency = 0.1, BorderSizePixel = 0,
+	}, screen)
+	new("UICorner", { CornerRadius = UDim.new(0, 12) }, panel)
+	new("UIStroke", { Color = ACCENT, Thickness = 1.5, Transparency = 0.45 }, panel)
+	new("UIGradient", { Rotation = 90, Color = ColorSequence.new(Color3.fromRGB(36, 40, 31), Color3.fromRGB(12, 13, 11)) }, panel)
+
+	local accent = new("Frame", { Size = UDim2.new(0, 4, 1, -22), Position = UDim2.fromOffset(11, 11), BackgroundColor3 = ACCENT, BorderSizePixel = 0 }, panel)
+	new("UICorner", { CornerRadius = UDim.new(1, 0) }, accent)
+
+	local title = label({
+		Text = "БАЗУКА  M1A1", FontFace = TITLE_FONT, TextSize = 26, TextColor3 = Color3.new(1, 1, 1),
+		Position = UDim2.fromOffset(25, 8), Size = UDim2.fromOffset(225, 30),
+	}, panel)
+	new("UIGradient", { Color = ColorSequence.new(Color3.new(1, 1, 1), Color3.fromRGB(255, 212, 150)) }, title)
+
+	label({
+		Text = "РЕАКТИВНЫЙ ПРОТИВОТАНКОВЫЙ ГРАНАТОМЁТ", FontFace = TEXT_FONT, TextSize = 10, TextColor3 = MUTED,
+		Position = UDim2.fromOffset(26, 37), Size = UDim2.fromOffset(260, 14),
+	}, panel)
+
+	local status = label({
+		Text = "", FontFace = TEXT_BOLD, TextSize = 12, TextColor3 = READY,
+		Position = UDim2.fromOffset(26, 57), Size = UDim2.fromOffset(220, 16),
+	}, panel)
+
+	label({
+		Text = "ЛКМ — ОГОНЬ", FontFace = TEXT_FONT, TextSize = 10, TextColor3 = MUTED,
+		TextXAlignment = Enum.TextXAlignment.Right, AnchorPoint = Vector2.new(1, 0),
+		Position = UDim2.new(1, -14, 0, 59), Size = UDim2.fromOffset(150, 14),
+	}, panel)
+
+	local ammo = label({
+		Text = "1", FontFace = TITLE_FONT, TextSize = 48, TextColor3 = ACCENT,
+		TextXAlignment = Enum.TextXAlignment.Right, AnchorPoint = Vector2.new(1, 0),
+		Position = UDim2.new(1, -60, 0, 4), Size = UDim2.fromOffset(60, 50),
+	}, panel)
+	label({
+		Text = "/ 1", FontFace = TEXT_BOLD, TextSize = 18, TextColor3 = MUTED,
+		AnchorPoint = Vector2.new(1, 0), Position = UDim2.new(1, -12, 0, 24), Size = UDim2.fromOffset(44, 24),
+	}, panel)
+
+	local barBg = new("Frame", {
+		AnchorPoint = Vector2.new(0, 1), Position = UDim2.new(0, 26, 1, -10), Size = UDim2.new(1, -40, 0, 5),
+		BackgroundColor3 = Color3.fromRGB(52, 56, 46), BorderSizePixel = 0,
+	}, panel)
+	new("UICorner", { CornerRadius = UDim.new(1, 0) }, barBg)
+	local fill = new("Frame", { Size = UDim2.fromScale(1, 1), BackgroundColor3 = Color3.new(1, 1, 1), BorderSizePixel = 0 }, barBg)
+	new("UICorner", { CornerRadius = UDim.new(1, 0) }, fill)
+	new("UIGradient", { Color = ColorSequence.new(Color3.fromRGB(255, 120, 40), Color3.fromRGB(255, 212, 110)) }, fill)
+
+	screen.Parent = player:WaitForChild("PlayerGui")
+	return screen, { Panel = panel, Status = status, Ammo = ammo, Fill = fill }
+end
+
+local function refresh()
+	if mouse then
+		mouse.Icon = Tool:GetAttribute("Loaded") == true and CURSOR_READY or CURSOR_WAIT
+	end
+	if not ui then return end
+	local loaded = Tool:GetAttribute("Loaded") == true
+	local reloading = Tool:GetAttribute("Reloading") == true
+
+	ui.Ammo.Text = loaded and "1" or "0"
+	ui.Ammo.TextColor3 = loaded and ACCENT or DANGER
+	if loaded then
+		ui.Status.Text = "•  ГОТОВ К ВЫСТРЕЛУ"
+		ui.Status.TextColor3 = READY
+	elseif reloading then
+		ui.Status.Text = "•  ПЕРЕЗАРЯДКА..."
+		ui.Status.TextColor3 = ACCENT
+	else
+		ui.Status.Text = "•  ВЫСТРЕЛ!"
+		ui.Status.TextColor3 = DANGER
+	end
+
+	ui.Ammo.TextSize = 58
+	TweenService:Create(ui.Ammo, TweenInfo.new(0.3, Enum.EasingStyle.Back, Enum.EasingDirection.Out), { TextSize = 48 }):Play()
+end
+
+local function onRender()
+	if not ui then return end
+	local p
+	if Tool:GetAttribute("Loaded") == true then
+		p = 1
+	elseif Tool:GetAttribute("Reloading") == true then
+		local dur = Tool:GetAttribute("ReloadTime") or 1
+		local left = (Tool:GetAttribute("ReloadEnd") or 0) - workspace:GetServerTimeNow()
+		p = math.clamp(1 - left / dur, 0, 1)
+	else
+		p = 0
+	end
+	ui.Fill.Size = UDim2.fromScale(p, 1)
+end
+
+Tool:GetAttributeChangedSignal("Loaded"):Connect(refresh)
+Tool:GetAttributeChangedSignal("Reloading"):Connect(refresh)
+
+Tool.Equipped:Connect(function(m)
+	equipped = true
+	mouse = m
+	if gui then gui:Destroy() end
+	gui, ui = buildHUD()
+	refresh()
+	onRender()
+	TweenService:Create(ui.Panel, TweenInfo.new(0.45, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), { Position = SHOWN_POS }):Play()
+	if renderConn then renderConn:Disconnect() end
+	renderConn = RunService.RenderStepped:Connect(onRender)
+end)
+
+Tool.Unequipped:Connect(function()
+	equipped = false
+	mouse = nil
+	if renderConn then renderConn:Disconnect() renderConn = nil end
+	local oldGui, oldUi = gui, ui
+	gui, ui = nil, nil
+	if oldGui and oldUi then
+		local t = TweenService:Create(oldUi.Panel, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.In), { Position = HIDDEN_POS })
+		t.Completed:Connect(function() oldGui:Destroy() end)
+		t:Play()
+	end
+end)
+
+Tool.Activated:Connect(function()
+	if not equipped or not mouse then return end
+	if Tool:GetAttribute("Loaded") ~= true then return end
+	FireRemote:FireServer(mouse.Hit.Position)
+end)
+]]></ProtectedString>
+			</Properties>
+		</Item>
+	</Item>
+</roblox>
